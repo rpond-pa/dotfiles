@@ -10,7 +10,8 @@ if tput setaf 1 &> /dev/null; then
 
   # If you would like to customize your colors, use
   # # Attribution: http://linuxtidbits.wordpress.com/2008/08/11/output-color-on-bash-scripts/
-  # for i in $(seq 0 $(tput colors)); do #   echo " $(tput setaf $i)Text$(tput sgr0) $(tput bold)$(tput setaf $i)Text$(tput sgr0) $(tput sgr 0 1)$(tput setaf $i)Text$(tput sgr0)  \$(tput setaf $i)"
+  # for i in $(seq 0 $(tput colors)); do
+  #   echo " $(tput setaf $i)Text$(tput sgr0) $(tput bold)$(tput setaf $i)Text$(tput sgr0) $(tput sgr 0 1)$(tput setaf $i)Text$(tput sgr0)  \$(tput setaf $i)"
   # done
 
   # Save common color actions
@@ -19,18 +20,18 @@ if tput setaf 1 &> /dev/null; then
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ $(tput colors) -ge 256 ]] &> /dev/null; then
-    prompt_user_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
+    prompt_user_color="$prompt_bold$(tput setaf 27)" # BOLD BLUE
     prompt_preposition_color="$prompt_bold$(tput setaf 7)" # BOLD WHITE
     prompt_device_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
     prompt_dir_color="$prompt_bold$(tput setaf 76)" # BOLD GREEN
-    prompt_git_status_color="$prompt_bold$(tput setaf 62)" # BOLD PURPLE
+    prompt_git_status_color="$prompt_bold$(tput setaf 154)" # BOLD YELLOW
   else
   # Otherwise, use colors from our set of 8
-    prompt_user_color="$prompt_bold$(tput setaf 6)" # BOLD CYAN
+    prompt_user_color="$prompt_bold$(tput setaf 4)" # BOLD BLUE
     prompt_preposition_color="$prompt_bold$(tput setaf 7)" # BOLD WHITE
     prompt_device_color="$prompt_bold$(tput setaf 6)" # BOLD CYAN
     prompt_dir_color="$prompt_bold$(tput setaf 2)" # BOLD GREEN
-    prompt_git_status_color="$prompt_bold$(tput setaf 13)" # BOLD PURPLE
+    prompt_git_status_color="$prompt_bold$(tput setaf 3)" # BOLD YELLOW
   fi
 
   prompt_symbol_color="$prompt_bold" # BOLD
@@ -159,17 +160,17 @@ function get_git_status() {
 
   # Iterate through all the cases and if it matches, then echo
   if [[ $dirty_branch == 1 && $branch_ahead == 1 && $branch_behind == 1 ]]; then
-    echo "*"
+    echo "⬢"
   elif [[ $dirty_branch == 1 && $branch_ahead == 1 ]]; then
-    echo "*"
+    echo "▲"
   elif [[ $dirty_branch == 1 && $branch_behind == 1 ]]; then
-    echo "*"
+    echo "▼"
   elif [[ $branch_ahead == 1 && $branch_behind == 1 ]]; then
-    echo "*"
+    echo "⬡"
   elif [[ $branch_ahead == 1 ]]; then
-    echo "*"
+    echo "△"
   elif [[ $branch_behind == 1 ]]; then
-    echo "*"
+    echo "▽"
   elif [[ $dirty_branch == 1 ]]; then
     echo "*"
   fi
@@ -203,13 +204,13 @@ function get_prompt_symbol() {
 }
 
 # Define the sexy-bash-prompt
-PS1="\[$prompt_user_color\]\u\[$prompt_reset\]\
-\[$prompt_preposition_color\]@\[$prompt_reset\]\
+PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
+\[$prompt_preposition_color\]at\[$prompt_reset\] \
 \[$prompt_device_color\]\h\[$prompt_reset\] \
-\[$prompt_preposition_color\](\[$prompt_reset\]\
-\[$prompt_dir_color\]\w\[$prompt_reset\])\
+\[$prompt_preposition_color\]in\[$prompt_reset\] \
+\[$prompt_dir_color\]\w\[$prompt_reset\]\
 \$( is_on_git && \
-  echo -n \" \[$prompt_preposition_color\][ \[$prompt_reset\]\" && \
+  echo -n \" \[$prompt_preposition_color\]on\[$prompt_reset\] \" && \
   echo -n \"\[$prompt_git_status_color\]\$(get_git_info)\" && \
-  echo -n \"\[$prompt_preposition_color\]\") ]\n\[$prompt_reset\]\
+  echo -n \"\[$prompt_preposition_color\]\")\n\[$prompt_reset\]\
 \[$prompt_symbol_color\]$(get_prompt_symbol) \[$prompt_reset\]"
