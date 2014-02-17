@@ -1,0 +1,13 @@
+tmp
+log
+chef
+coverage
+perf
+spec/vcr
+vendor/
+public/generated/
+doc
+tags
+.tags
+.gemtags
+
