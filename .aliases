@@ -19,10 +19,6 @@ alias gg='git grep'
 alias ggems='cd $(rbenv prefix)/lib/ruby/gems/2.1.0/gems'
 alias myctags="ctags -R --exclude='*min.js' --exclude='*ckeditor*' --exclude='*jquery-ui*' --exclude='*jquerycontextMenu*' -f tags"
 
-# Vim bindings
-export EDITOR=vim
-set -o vi
-
  #Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"

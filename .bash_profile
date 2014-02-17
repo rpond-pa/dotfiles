@@ -15,6 +15,10 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# Vim bindings
+export EDITOR=vim
+set -o vi
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 

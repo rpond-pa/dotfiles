@@ -15,6 +15,9 @@ set mark-symlinked-directories on
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 set match-hidden-files off
 
+# Vim
+set editing-mode vi
+
 # Show all autocomplete results at once
 set page-completions off
 
@@ -36,5 +39,3 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
-# Use Alt/Meta + Delete to delete the preceding word
-"\e[3;3~": kill-word
