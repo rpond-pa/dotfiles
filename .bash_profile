@@ -1,6 +1,3 @@
-export PATH="/usr/local/mysql/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -16,7 +13,6 @@ shopt -s nocaseglob
 shopt -s histappend
 
 # Vim bindings
-export EDITOR=vim
 set -o vi
 
 # Autocorrect typos in path names when using `cd`
