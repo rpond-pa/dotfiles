@@ -20,9 +20,9 @@ if tput setaf 1 &> /dev/null; then
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ $(tput colors) -ge 256 ]] &> /dev/null; then
-    prompt_user_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
+    prompt_user_color="$prompt_bold$(tput setaf 45)" # BOLD CYAN
     prompt_preposition_color="$prompt_bold$(tput setaf 7)" # BOLD WHITE
-    prompt_device_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
+    prompt_device_color="$prompt_bold$(tput setaf 45)" # BOLD CYAN
     prompt_dir_color="$prompt_bold$(tput setaf 76)" # BOLD GREEN
     prompt_git_status_color="$prompt_bold$(tput setaf 154)" # BOLD YELLOW
   else
