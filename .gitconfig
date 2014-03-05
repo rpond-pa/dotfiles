@@ -4,6 +4,7 @@
 
 [color]
   ui = always
+  diff = auto
 
 [format]
   pretty = %C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]
