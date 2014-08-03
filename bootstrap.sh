@@ -5,6 +5,9 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude ".vim/backups" --exclude ".vim/swaps" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+	mkdir ~/.vim/backups
+	mkdir ~/.vim/swaps
+	mkdir ~/.vim/undo
 	source ~/.bash_profile
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
