@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
+tap 'homebrew/versions'
 brew 'autoconf'
 brew 'bash'
 brew 'coreutils'
