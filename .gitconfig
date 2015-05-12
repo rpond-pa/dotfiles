@@ -24,6 +24,7 @@
   ; up = pull --rebase
   ; pr = pull --rebase
   p = pull
+  pr = pull --rebase
   graph = log --all --graph --decorate --oneline
   ls = log --decorate
   ll = log --decorate --stat --oneline
