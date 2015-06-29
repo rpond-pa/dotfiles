@@ -9,7 +9,7 @@ alias d="cd ~/dev"
 alias dots="cd ~/dev/dotfiles"
 alias h="history | grep"
 alias be="bundle exec"
-alias ag="ag --pager='less -R'"
+alias agl="ag --pager='less -R'"
 
 # Git shortcuts
 alias g='git'
