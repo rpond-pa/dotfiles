@@ -23,6 +23,7 @@
 [alias]
   ; up = pull --rebase
   ; pr = pull --rebase
+  f = fetch
   p = pull
   pr = pull --rebase
   graph = log --all --graph --decorate --oneline
