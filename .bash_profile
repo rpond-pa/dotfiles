@@ -12,7 +12,7 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 # https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Vim bindings
 set -o vi
