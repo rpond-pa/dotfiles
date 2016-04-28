@@ -9,7 +9,7 @@ alias d="cd ~/dev"
 alias dots="cd ~/dev/dotfiles"
 alias h="history | grep"
 alias be="bundle exec"
-alias agl="ag --pager='less -R'"
+alias a="ag --pager='less -R'"
 
 # Git shortcuts
 alias g='git'
@@ -46,7 +46,7 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias sudo='sudo '
 
 # Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
