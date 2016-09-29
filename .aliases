@@ -5,7 +5,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Shortcuts
-alias d="cd ~/dev"
+alias d="docker"
 alias dots="cd ~/dev/dotfiles"
 alias h="history | grep"
 alias be="bundle exec"
